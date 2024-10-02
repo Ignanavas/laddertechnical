@@ -1,0 +1,266 @@
+/*
+Theme Name: Lader Ignacio Navas
+Theme URI: https://ignacio.com/
+Author: Ignacio Navas
+Author URI: https://ignacio.com/
+Description: Tema personalizado para la landing page de Lader.
+Version: 1.0
+Text Domain: lader-landing
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap');
+
+/* Variables de color */
+:root {
+    --color-highlight-1: #e1359d;
+    --color-highlight-2: #5e17ea;
+    --color-highlight-3: #ae5bf6;
+    --color-highlight-4: #b7f200;
+    --color-light: #ededed;
+    --color-dark: #1e173f;
+}
+.site-header img {
+    max-width: 10%; 
+    height: auto;    
+}
+/* Estilos globales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-light);
+    min-height: 100vh;
+    color: var(--color-dark);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--color-highlight-2);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-highlight-3);
+}
+
+/* Header */
+.site-header {
+    background-color: var(--color-dark);
+    padding: 20px;
+    text-align: center;
+}
+
+.site-header h1 {
+    color: var(--color-light);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--color-highlight-2);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: var(--color-highlight-1);
+    color: var(--color-light);
+    padding: 15px 30px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: var(--color-highlight-3);
+}
+
+/* Servicios */
+.services-section {
+    background-color: var(--color-light);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.service-item {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    vertical-align: top;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-highlight-2);
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    padding: 20px;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.contact-form {
+    flex: 1; 
+    margin-right: 20px;
+}
+
+.contact-image {
+    flex: 1; 
+    text-align: center; 
+}
+
+.contact-image img {
+    max-width: 110%; 
+    height: auto; 
+    margin-top: 15%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block; 
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005177;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    max-width: 600px; 
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    position: relative;
+    min-width: 33.33%;
+}
+
+.carousel-slide img {
+    width: 100%; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    opacity: 0;
+    transition: opacity 0.3s; 
+}
+
+.carousel-slide:hover .overlay {
+    opacity: 1; 
+
+}
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+    .services-section {
+        padding: 40px 20px;
+    }
+
+    .service-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
